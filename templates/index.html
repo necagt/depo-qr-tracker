@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Malzeme Girişi</title>
+</head>
+<body>
+    <h2>Malzeme Bilgisi Ekle</h2>
+    <form action="/add" method="post">
+        <label>Malzeme Adı:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Malzeme Cinsi:</label><br>
+        <input type="text" name="type" required><br><br>
+
+        <label>Malzeme Kodu:</label><br>
+        <input type="text" name="code" required><br><br>
+
+        <label>Malzeme Rafı:</label><br>
+        <input type="text" name="shelf"><br><br>
+
+        <label>Raf Ömrü:</label><br>
+        <input type="number" name="shelf_life" required><br><br>
+
+        <label>Raf Ömrü Birimi:</label><br>
+        <select name="shelf_life_unit">
+            <option value="gün">Gün</option>
+            <option value="ay">Ay</option>
+            <option value="yıl">Yıl</option>
+        </select><br><br>
+
+        <label>Depo:</label><br>
+        <input type="text" name="warehouse"><br><br>
+
+        <button type="submit">Kaydet ve QR Kod Oluştur</button>
+    </form>
+</body>
+</html>
+
+<p><a href="/track">Malzeme Takibi için tıklayın</a></p>

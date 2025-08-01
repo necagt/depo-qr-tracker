@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Malzeme Detayı</title>
+</head>
+<body>
+    <h2>Malzeme Detay Bilgileri</h2>
+
+    <ul>
+        <li><strong>Malzeme Adı:</strong> {{ material.name }}</li>
+        <li><strong>Malzeme Cinsi:</strong> {{ material.type }}</li>
+        <li><strong>Malzeme Kodu:</strong> {{ material.code }}</li>
+        <li><strong>Malzeme Rafı:</strong> {{ material.shelf }}</li>
+        <li><strong>Raf Ömrü:</strong> {{ material.shelf_life }} {{ material.shelf_life_unit }}</li>
+        <li><strong>Bulunduğu Depo:</strong> {{ material.warehouse }}</li>
+        <li><strong>Kayıt Tarihi:</strong> {{ material.created_at }}</li>
+    </ul>
+
+    <h3>QR Kod</h3>
+    <img src="{{ url_for('static', filename='qrcodes/' ~ material.id ~ '.png') }}" alt="QR Kod">
+</body>
+</html>
