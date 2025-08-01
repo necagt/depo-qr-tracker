@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: depo-qr-tracker
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    plan: free
+    runtime: python
+    pythonVersion: 3.10
