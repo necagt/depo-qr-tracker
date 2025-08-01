@@ -15,3 +15,6 @@ ENV PORT=10000
 
 # Uygulamayı başlat
 CMD ["python", "app.py"]
+
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:10000"]
+
